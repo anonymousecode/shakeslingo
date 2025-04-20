@@ -1,0 +1,180 @@
+/* Import custom font */
+@import url('https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap');
+
+/* Apply font globally */
+* {
+  font-family: "MedievalSharp", cursive;
+  font-weight: 400;
+  color: black;
+}
+
+body {
+    background-image: url("images/bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* Styling for h1 */
+h1 {
+    font-size: 70px;
+    text-align: center;
+    margin-top: 20px;
+    font-weight: 600;
+}
+
+audio{
+    display: none; /* Hide the audio element */
+}
+
+.ShakesLingo{
+    padding-top: 0;
+}
+
+/* Default styling for the textarea */
+.shakeslingo-textarea {
+  width: 100%;
+  max-width: 700px; /* Limit the width to a max of 600px */
+  min-height: 150px; /* Limit the height to a max of 300px */
+  padding: 0.75rem;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  line-height: 1.5;
+  background-color: #f9f9f9;
+  resize: vertical; /* Allow vertical resizing only */
+  transition: border-color 0.3s ease, background-color 0.3s ease;
+  box-sizing: border-box; /* Ensures padding doesn’t overflow the width */
+  margin: 0 auto; /* Center the textarea */
+}
+
+/* Focus state styling for the textarea */
+.shakeslingo-textarea:focus {
+  border-color: #562601; /* Darker border color on focus */
+  background-color: #fff; /* White background on focus */
+  outline: none; /* Remove default outline */
+}
+
+/* Placeholder styling */
+.shakeslingo-textarea::placeholder {
+  color: #888; /* Placeholder text color */
+}
+
+/* Container for the GIF and speech bubble */
+.shakeslingo-container {
+  display: flex;
+  margin-top: 30px;
+  align-items: center;
+  justify-content: center;
+  gap: 20px; /* Adds space between the GIF and the speech bubble */
+}
+
+/* Styling for the Shakespeare image */
+.shakespeare-image {
+  width: 150px;
+  height: auto;
+  max-width: 200px;  /* Prevent oversized images */
+}
+
+/* Speech bubble styling */
+.speech-bubble {
+  display: inline-block;
+  padding: 15px;
+  background-color: #f1f1f1;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  position: relative;
+  max-width: 90%;
+  max-width: 300px;
+  z-index: 2;
+}
+
+.speech-bubble:after {
+    content: '';
+    position: absolute;
+    left: -15px; /* Place the arrow to the left of the bubble */
+    top: 50%;
+    margin-top: -5px; /* Adjust to center the arrow vertically */
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent #f1f1f1 transparent transparent; /* Create the arrow */
+}
+
+/* Styling for the tablet screen (medium screens) */
+@media (min-width: 600px) and (max-width: 1024px) {
+  
+  /* Adjust heading size for medium screens */
+  h1 {
+    font-size: 60px; /* Reduce the font size for medium screens */
+    margin-top: 20px;
+  }
+
+  /* Adjust the textarea */
+  .shakeslingo-textarea {
+    max-width: 80%; /* Limit width for medium screens */
+    min-height: 120px; /* Adjust minimum height */
+    padding: 0.6rem; /* Adjust padding */
+  }
+
+  /* Adjust the container layout */
+  .shakeslingo-container {
+    gap: 15px; /* Slightly reduce the gap between the elements */
+  }
+
+  /* Adjust Shakespeare image size */
+  .shakespeare-image {
+    width: 100px;
+    max-width: 120px;  /* Prevent oversized images */
+  }
+
+  /* Adjust the speech bubble size */
+  .speech-bubble {
+    max-width: 80%; /* Limit the width of the speech bubble */
+  }
+
+  /* Adjust the button size */
+  button {
+    padding: 0.5rem 1.2rem;
+    font-size: 1.1rem; /* Adjust font size */
+  }
+}
+
+/* Responsive styling for smaller screens */
+@media (max-width: 600px) {
+
+    h1 {
+        font-size: 50px; /* Adjust font size for smaller screens */
+    }
+
+  .shakeslingo-textarea {
+    max-width: 90%; /* Allow full width on small screens */
+    min-height: 100px;
+    padding: 0.5rem; /* Adjust padding for smaller screens */
+  }
+}
+
+/* General styles for the container */
+.ShakesLingo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Button styling */
+button {
+  padding: 0.5rem 1.5rem;
+  margin-top: 20px;
+  font-size: 1rem;
+  background-color: #562601;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #6c3b1b; /* Darker color on hover */
+}
